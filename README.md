@@ -1,4 +1,4 @@
-Using a test-driven development approach to deconstruct and recreate JavaScript functions. <br>
+Using a test-driven development approach to deconstruct and recreate JavaScript higher-order functions. <br>
 
 jsTinyTest: https://github.com/joewalnes/jstinytest
 

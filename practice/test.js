@@ -1,11 +1,18 @@
 // Testing .forEach()
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 
-var testArray = [1, 2, 3]
+var forEach = function(array, callback, optionalThisObject){
 
-var forEach = function(array, callback){
+    var forEachCallback = callback
+
+    if (optionalThisObject) {
+        // Want to bind thisObject to the callback function
+        // callback.bind(thisObject) creates a new function, but does not modify the actual callback argument
+        forEachCallback = callback.bind(optionalThisObject);
+    }
+
     for (var i = 0; i < array.length; i++){
-        callback(array[i], i, array);
+        forEachCallback(array[i], i, array);
     }
 }
 
@@ -28,3 +35,5 @@ var forEach = function(array, callback){
 // forEach.([1, 2, 3], function(number, index, OriginalArray){
 //     console.log(OriginalArray)
 // });
+
+// Test 5:

@@ -16,11 +16,11 @@ tests({
 // refer to test.js forEach()
 
     'It should run the callback function array.length times': function(){
-        var counter = 0
+        var numberOfTimesCallbackHasRun = 0
         forEach([1, 2, 3], function(){
-            counter++;
+            numberOfTimesCallbackHasRun++;
         });
-        eq(counter, 3);
+        eq(numberOfTimesCallbackHasRun, 3);
     },
 
     'It should pass in the ith element as the first argument to the callback': function(){
@@ -36,10 +36,17 @@ tests({
     },
 
     'It should pass in the original array as the third argument to the callback': function(){
+        var testArray = [1, 2, 3]
         forEach(testArray, function(number, index, originalArray){
             eq(testArray, originalArray)
         })
     },
+
+    'It should accept an optional this object': function(){
+        forEach([1], function(){
+            eq(this.description, 'I should be accessible inside the callback')
+        }, {description: 'I should be accessible inside the callback'});
+    }
 
 
 });

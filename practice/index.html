@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jsTinyTest</title>
+</head>
+
+<body>
+
+<script src="../tinytest.js"></script>
+<script src="test.js"></script>
+<script>
+
+tests({
+
+// refer to test.js forEach()
+
+    'It should run the callback function array.length times': function(){
+        var counter = 0
+        forEach([1, 2, 3], function(){
+            counter++;
+        });
+        eq(counter, 3);
+    },
+
+    'It should pass in the ith element as the first argument to the callback': function(){
+        forEach([1], function(number){
+        eq(number, 1)
+        });
+    },
+
+    'It should pass in the ith position as the second argument to the callback': function(){
+        forEach([1], function(number, index){
+            eq(index, 0)
+        });
+    },
+
+    'It should pass in the original array as the third argument to the callback': function(){
+        forEach(testArray, function(number, index, originalArray){
+            eq(testArray, originalArray)
+        })
+    },
+
+
+});
+
+</script>
+
+</body>
+
+</html>

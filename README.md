@@ -4,4 +4,5 @@ jsTinyTest: https://github.com/joewalnes/jstinytest
 
 Todo:
 * ~~.forEach~~
-* .filter
+* ~~.filter~~
+* .map

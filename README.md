@@ -6,4 +6,4 @@ Todo:
 * ~~.forEach~~
 * ~~.filter~~
 * ~~.map~~
-* .reduce
+* ~~.reduce~~

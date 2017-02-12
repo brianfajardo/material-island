@@ -7,3 +7,4 @@ Todo:
 * ~~.filter~~
 * ~~.map~~
 * ~~.reduce~~
+* modify jsTinyTest to make it even better --> easyTest.js

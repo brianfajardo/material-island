@@ -6,4 +6,5 @@ Todo:
 * ~~.forEach~~
 * ~~.filter~~
 * ~~.map~~
-* .reduce
+* ~~.reduce~~
+* modify jsTinyTest to make it even better --> jsClearTest.js
